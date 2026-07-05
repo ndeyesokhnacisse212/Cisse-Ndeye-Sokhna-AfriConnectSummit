@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,338 @@
 <body>
 
     <!-- Contenue de la page -->
+<header>
 
+        <!-- barre de navigation -->
+        <nav class="navbar">
+            <!-- LOGO AFRICONNECTSUMMIT -->
+             <div class="navbar-logo">
+                <!-- a pour pouvoir cliquer sur le logo -->
+                <a href="index.html">
+                    <img src="images/logo.PNG" alt="logo d'AfriConnectSummit">
+                </a>
+             </div>
+
+             <!-- lien de navigation -->
+            <ul class="navbar-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="intervenants.html">Intervenant</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+            <!-- Bouton Toggle Dark/Light Mode -->
+             <div class="navbar-theme">
+                <button id="theme-toggle" class="btn-theme">
+                    <!-- Icone -->
+                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+                        <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+                    </svg>
+                </button>
+             </div>
+
+             <!-- icone menu hamburger pour mobile -->
+              <div class="hamburger" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+        </nav>
+
+</header>
+
+ <!-- Bannière, titre <h1>, fil d'Ariane (Accueil > Programme) -->
+    <section class="hero-page-programme">
+        <div class="programme-container">
+            <h1>Programmes de la conférence</h1>
+            <nav class="inter">
+                <a href="index.html">Accueil</a>
+                <span class="ariane-separateur">&gt;</span>
+                <span class="ariane">Programme</span>
+
+            </nav>
+        </div>
+    </section>
+
+<main>
+
+    <!-- onglet 3JOURS -->
+     <article class="page-programme">
+        <h2>Emploie du temps</h2>
+
+        <div class="onglet-bloc">
+            <button class="btn-onglet" onclick="changerJour('jour1')">Jour 1</button>
+            <button class="btn-onglet" onclick="changerJour('jour2')">Jour 2</button>
+            <button class="btn-onglet" onclick="changerJour('jour3')">Jour 3</button>
+        </div>
+
+        <!-- Planning jour 1 en tableau -->
+         <div id="jour1" class="contenu-planning">
+            <table class="table-style">
+
+                <thead>
+
+                    <tr>
+                        <th>Heure</th>
+                        <th>Session</th>
+                        <th>Intervenant</th>
+                        <th>Salle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00</td>
+                        <td>Ouverture &amp; Accueil</td>
+                        <td>Directeur</td>
+                        <td>Amphi A</td>
+                    </tr>
+                    <tr>
+                        <td>10:30</td>
+                        <td>Conférence IA &amp; web</td>
+                        <td>Jean Dupont</td>
+                        <td>Salle 102</td>
+                    </tr>
+                    <tr>
+                        <td>12:00</td>
+                        <td>Pause dejeuner</td>
+                        <td>-</td>
+                        <td>Cafeteria</td>
+                    </tr>
+                    <tr>
+                        <td>14:00</td>
+                        <td>Atelier Flexbox Expert</td>
+                        <td>Sarah connor</td>
+                        <td>Labo informatique</td>
+                    </tr>
+                    <tr>
+                        <td>16:00</td>
+                        <td>Table Ronde Tech</td>
+                        <td>Tous les experts</td>
+                        <td>Amphi A</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+         </div>
+
+  <!--  Planning jour 2-->
+          <div id="jour2" class="contenu-planning">
+            <table class="table-style">
+
+                <thead>
+
+                    <tr>
+                        <th>Heure</th>
+                        <th>Session</th>
+                        <th>Intervenant</th>
+                        <th>Salle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00</td>
+                        <td>Introduction cybersecurity</td>
+                        <td>Maimouna Cisse</td>
+                        <td>Amphi B</td>
+                    </tr>
+                    <tr>
+                        <td>11:00</td>
+                        <td>Ethical Hacking 101</td>
+                        <td>Khalil Ndiaye</td>
+                        <td>Salle 204</td>
+                    </tr>
+                    <tr>
+                        <td>12:30</td>
+                        <td>Pause dejeuner</td>
+                        <td>-</td>
+                        <td>Espace sponsors</td>
+                    </tr>
+                    <tr>
+                        <td>14:30</td>
+                        <td>Optimisation Base de Données</td>
+                        <td>Elisa Lopez</td>
+                        <td>Salle 105</td>
+                    </tr>
+                    <tr>
+                        <td>16:30</td>
+                        <td>Pitch des Startups</td>
+                        <td>Jury</td>
+                        <td>Amphi B</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+         </div>
+
+<!-- Planning jour 3 -->
+         <div id="jour3" class="contenu-planning">
+            <table class="table-style">
+
+                <thead>
+
+                    <tr>
+                        <th>Heure</th>
+                        <th>Session</th>
+                        <th>Intervenant</th>
+                        <th>Salle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00</td>
+                        <td>Futur du Framework web</td>
+                        <td>Christophe Mendy</td>
+                        <td>Amphi A</td>
+                    </tr>
+                    <tr>
+                        <td>10:30</td>
+                        <td>UI/UX et Accessibilité</td>
+                        <td>Jean Dupont</td>
+                        <td>Salle 102</td>
+                    </tr>
+                    <tr>
+                        <td>12:00</td>
+                        <td>Pause dejeuner</td>
+                        <td>-</td>
+                        <td>Cafeteria</td>
+                    </tr>
+                    <tr>
+                        <td>14:00</td>
+                        <td>Atelier Data Science</td>
+                        <td>Sarah connor</td>
+                        <td>Labo informatique</td>
+                    </tr>
+                    <tr>
+                        <td>16:00</td>
+                        <td>Remise des prix &amp; fin</td>
+                        <td>organisateur</td>
+                        <td>Amphi A</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+     </article>
+
+     <!-- section thematique -->
+
+     <section class="thematique">
+        <h2>Thématique de la conférence</h2>
+        <div class="grille-theme">
+
+            <div class="anim-scroll">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-airplane-engines-fill" viewBox="0 0 16 16">
+                        <path d="M8 0c-.787 0-1.292.592-1.572 1.151A4.35 4.35 0 0 0 6 3v3.691l-2 1V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.191l-1.17.585A1.5 1.5 0 0 0 0 10.618V12a.5.5 0 0 0 .582.493l1.631-.272.313.937a.5.5 0 0 0 .948 0l.405-1.214 2.21-.369.375 2.253-1.318 1.318A.5.5 0 0 0 5.5 16h5a.5.5 0 0 0 .354-.854l-1.318-1.318.375-2.253 2.21.369.405 1.214a.5.5 0 0 0 .948 0l.313-.937 1.63.272A.5.5 0 0 0 16 12v-1.382a1.5 1.5 0 0 0-.83-1.342L14 8.691V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v.191l-2-1V3c0-.568-.14-1.271-.428-1.849C9.292.591 8.787 0 8 0"/>
+                    </svg>
+                </span>
+                <h3>Innovation</h3>
+                <p>Découvrez les technologies de demain et les tendances web émergentes</p>
+
+            </div>
+
+            <div class="anim-scroll">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-palette" viewBox="0 0 16 16">
+                         <path d="M8 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m4 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M5.5 7a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
+                         <path d="M16 8c0 3.15-1.866 2.585-3.567 2.07C11.42 9.763 10.465 9.473 10 10c-.603.683-.475 1.819-.351 2.92C9.826 14.495 9.996 16 8 16a8 8 0 1 1 8-8m-8 7c.611 0 .654-.171.655-.176.078-.146.124-.464.07-1.119-.014-.168-.037-.37-.061-.591-.052-.464-.112-1.005-.118-1.462-.01-.707.083-1.61.704-2.314.369-.417.845-.578 1.272-.618.404-.038.812.026 1.16.104.343.077.702.186 1.025.284l.028.008c.346.105.658.199.953.266.653.148.904.083.991.024C14.717 9.38 15 9.161 15 8a7 7 0 1 0-7 7"/>
+                    </svg>
+                </span>
+                <h3>Design &amp; UI</h3>
+                <p>Créez des interfaces utilisateurs modernes, fluides et accessibles</p>
+
+            </div>
+
+            <div class="anim-scroll">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 0a4 4 0 0 1 4 4v2.05a2.5 2.5 0 0 1 2 2.45v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5v-5a2.5 2.5 0 0 1 2-2.45V4a4 4 0 0 1 4-4M4.5 7A1.5 1.5 0 0 0 3 8.5v5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 11.5 7zM8 1a3 3 0 0 0-3 3v2h6V4a3 3 0 0 0-3-3"/>
+                    </svg>
+                </span>
+                <h3>Sécurité</h3>
+                <p>Protégez vos applications et infrastuctures contre les cybermenaces</p>
+            </div>
+
+            <div class="anim-scroll">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-line" viewBox="0 0 16 16">
+                        <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1zm1 12h2V2h-2zm-3 0V7H7v7zm-5 0v-3H2v3z"/>
+                    </svg>
+                </span>
+                <h3>Data Science</h3>
+                <p>Analysez et exploitez la puissance des Données pour vos projets</p>
+            </div>
+
+        </div>
+
+     </section>
+
+    
+</main>
+
+
+     <!-- FOOTER -->
+ <footer>
+    <div class="contenu-footer">
+        <!-- description  -->
+        <div class="info-conf">
+            <h3>AfriConnectSummit 2026</h3>
+            <img src="images/logo.PNG" alt="logo">
+            <p>le grand rendez vous annuel des passionnés du web et des nouvelles technologies</p>
+        </div>
+
+        <!-- bloc des liens -->
+         <div class="liens-footer">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="intervenants.html">Intervenant</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+         </div>
+
+         <!-- bloc reseau sociaux -->
+          <div class="reseau">
+            <h4>Nous suivre</h4>
+            <div class="icone-reseau">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                    </svg>
+                </a>
+            </div>
+
+          </div>
+    </div>
+
+    <div class="droit-auteur">
+        <p>&copy;2026 TechConf .Tous droits réservés.</p>
+    </div>
+ </footer>
+
+ <!--Bouton retour en haut  -->
+ <button id="retour">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+    </svg>
+</button>
 
    <!--script JavaScript --> 
 <script src="js/main.js"></script> 

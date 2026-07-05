@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,259 @@
 <body>
 
     <!-- Contenue de la page -->
+      <header>
 
+        <!-- barre de navigation -->
+        <nav class="navbar">
+            <!-- LOGO AFRICONNECTSUMMIT -->
+             <div class="navbar-logo">
+                <!-- a pour pouvoir cliquer sur le logo -->
+                <a href="index.html">
+                    <img src="images/logo.PNG" alt="logo d'AfriConnectSummit">
+                </a>
+             </div>
+
+             <!-- lien de navigation -->
+            <ul class="navbar-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="intervenants.html">Intervenant</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+            <!-- Bouton Toggle Dark/Light Mode -->
+             <div class="navbar-theme">
+                <button id="theme-toggle" class="btn-theme">
+                    <!-- Icone -->
+                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+                        <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+                    </svg>
+                </button>
+             </div>
+
+             <!-- icone menu hamburger pour mobile -->
+              <div class="hamburger" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+        </nav>
+
+     </header>
+
+ <!-- Bannière, titre <h1>, fil d'Ariane (Accueil > Contact) -->
+    <section class="hero-interne">
+        <div class="hero-container">
+            <h1>Contact</h1>
+            <nav class="inter">
+                <a href="index.html">Accueil</a>
+                <span class="separateur">&gt;</span>
+                <span class="current">Contact</span>
+
+            </nav>
+        </div>
+    </section>
+<main>
+
+    <!--section inscription et info 2 colonnes flexbox  -->
+    <section class="flex-inscription">
+        <!-- premier colonne : formulaire -->
+         <div class="colonne-formulaire">
+            <h2>Formulaire d'inscription</h2>
+
+            <form id="form-inscription" method="post">
+
+                <div class="group-champ">
+                    <label for="nom-complet">Nom complet</label>
+                    <input type="text" id="nom-complet" name="nom-complet" required>
+                </div>
+
+                <div class="group-champ">
+                    <label for="email">Adresse email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="group-champ">
+                    <label for="tel">Numéro de téléphone</label>
+                    <input type="tel" id="tel" name="tel" required>
+                </div>
+
+                <div class="group-champ">
+                    <label for="type-part">Type de participation</label>
+                     <select name="type-part" id="type-part" required>
+                        <option value="">Choisir un option</option>
+                        <option value="etudiant">Etudiant</option>
+                        <option value="professionnel">Professionnel</option>
+                        <option value="intervenant">Intervenant</option>
+                        <option value="partenaire">Sponsor</option>
+                    </select>
+                </div>
+
+                <div class="group-champ">
+                    <label for="pays">Pays afriçain</label>
+                    <select name="pays" id="pays" required>
+                        <option value="">Sélectionne un pays</option>
+                        <option value="senegal">Sénégal</option>
+                        <option value="mali">Mali</option>
+                        <option value="tunisie">Tunisie</option>
+                        <option value="cote-d'ivoire">Cote d'ivoire</option>
+                        <option value="ghana">Ghana</option>
+                        <option value="congo">Congo</option>
+                        <option value="gambie">Gambie</option>
+                        <option value="guinee">Guinée</option>
+                        <option value="gabon">Gabon</option>
+                        <option value="cameroun">Cameroun</option>
+                    </select>
+                </div>
+
+                <div class="group-champ">
+                    <label for="motivation">Message de Motivation</label>
+                    <textarea name="motivation" id="motivation" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-validation">Envoyer l'inscription</button>
+
+                <!-- zone pour le mess de succés js -->
+                 <div id="message-statut"></div>
+
+            </form>
+         </div>
+
+         <!-- colonne droite:information de contact -->
+          <div class="colonne-infos">
+            <h2>Information Utiles</h2>
+            <div class="bloc-contact-detail">
+                <p><strong>Adresse:</strong>Avenue Cheikh Anta Diop , Dakar, Sénégal</p>
+                <p><strong>Email:</strong>contact@africonnectsummit.com</p>
+                <p><strong>Téléphone:</strong>+221 835 99 46</p>
+                <p><strong>Horaires:</strong>Lundi-Vendredi : 8h00 - 18h00</p>
+            </div>
+
+          </div>
+    </section>
+
+    <!-- FAQ en accordéon -->
+     <section class="section-faq">
+        <h2>FAQ</h2>
+        <div class="accordeon-conteneur">
+
+            <!-- question 1 -->
+            <div class="faq-item">
+                <input type="checkbox" id="faq1" class="faq-toggle">
+                <label for="faq1" class="faq-titre">Ou se déroule l'événement de cette année ???</label>
+                <div class="faq-reponse">
+                    <p>Le sommet se tiendra principalement à Diamniadio-Sénégal, CICAD avec des retransmission en direct pour les participants à distance</p>
+                </div>
+            </div>
+
+             <!-- question 2 -->
+            <div class="faq-item">
+                <input type="checkbox" id="faq2" class="faq-toggle">
+                <label for="faq2" class="faq-titre">Quels sont les mode de paiements acceptés pour l'inscription ???</label>
+                <div class="faq-reponse">
+                    <p> Nous acceptons les cartes bancaires internationales ainsi que les solutions de paiement mobile locale (wave, orange money ...)</p>
+                </div>
+            </div>
+
+             <!-- question 3 -->
+            <div class="faq-item">
+                <input type="checkbox" id="faq3" class="faq-toggle">
+                <label for="faq3" class="faq-titre">Est il possible de modifier mon type de participation apres la validation ???</label>
+                <div class="faq-reponse">
+                    <p>Oui, vous pouvez modifier vos informations en envoyant un mail à notre équipe support avant la date limite fixée</p>
+                </div>
+            </div>
+
+             <!-- question 4 -->
+            <div class="faq-item">
+                <input type="checkbox" id="faq4" class="faq-toggle">
+                <label for="faq4" class="faq-titre">Les étudiants bénificients ils d'un tarif préférentiel??</label>
+                <div class="faq-reponse">
+                    <p>Biensur, une réduction important est appliquée sur présentation d'une carte d'etudiant valide pour l'année en cours</p>
+                </div>
+            </div>
+
+             <!-- question 5 -->
+            <div class="faq-item">
+                <input type="checkbox" id="faq5" class="faq-toggle">
+                <label for="faq5" class="faq-titre">Recevrons nous une attestation de présence aprés le sommet ???</label>
+                <div class="faq-reponse">
+                    <p>Oui, un certificat de participation officiel numérique vous sera envoyé automatiquement par email à la fin de l'événement</p>
+                </div>
+            </div>
+
+
+        </div>
+
+     </section>
+
+     <!-- google maps -->
+      <section id="localisation">
+         <h2>Localisation</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123488.89531244329!2d-17.548228248033386!3d14.711009895448933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172f5b3c5bb71%3A0xb17c17d92d5db21f!2sDakar!5e0!3m2!1sfr!2ssn!4v1776633962208!5m2!1sfr!2ssn" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+</main>
+
+
+
+     <!-- FOOTER -->
+ <footer>
+    <div class="contenu-footer">
+        <!-- description  -->
+        <div class="info-conf">
+            <h3>AfriConnectSummit 2026</h3>
+            <img src="images/logo.PNG" alt="logo">
+            <p>le grand rendez vous annuel des passionnés du web et des nouvelles technologies</p>
+        </div>
+
+        <!-- bloc des liens -->
+         <div class="liens-footer">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="intervenants.html">Intervenant</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+         </div>
+
+         <!-- bloc reseau sociaux -->
+          <div class="reseau">
+            <h4>Nous suivre</h4>
+            <div class="icone-reseau">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                    </svg>
+                </a>
+            </div>
+
+          </div>
+    </div>
+
+    <div class="droit-auteur">
+        <p>&copy;2026 TechConf .Tous droits réservés.</p>
+    </div>
+ </footer>
+
+ <!--Bouton retour en haut  -->
+<button id="retour">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+    </svg>
+</button>
 
    <!--script JavaScript --> 
 <script src="js/main.js"></script> 
