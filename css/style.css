@@ -1,0 +1,232 @@
+importation des polices google font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+AR+Guides&family=Playwrite+GB+J+Guides:ital@0;1&family=Playwrite+MX+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variable global du site (:root) */
+:root{
+    /* palette de couleur */
+    --primary-color:#0B192C;
+    --secondary-color:#FF6B35;
+    --accent-color:#1E3A8A;
+    --bg-light-color:#F8FAFC;
+    --text-main-color:#1F2937;
+    --text-muted-color:#4B5563;
+
+    /* typographie */
+    --heading:'Montserrat', sans-serif;
+    --body:'Roboto',sans-serif;
+
+    /* espacement */
+    --space-sm:0.5rem;
+    --space-md:1rem;
+    --space-lg:2rem;
+     --space-xl:4rem;
+
+     /* transition */
+     --transition:all 0.3s ease;
+
+
+}
+
+/* le corps de la page */
+body{
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-main-color);
+    background-color: var(--bg-light-color);
+    padding-top: 100px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+ul{
+    list-style: none;
+}
+
+h1, h2,h3,h4{
+    font-family: var(--heading);
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+/* style de la navbar */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--primary-color);
+    border-bottom: 1px solid rgba(255,255,255, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md) var(--space-lg) ;
+}
+
+/* alignement du logo */
+.navbar-logo{
+    display: flex;
+    align-items: center;
+}
+.navbar-logo img{
+    height: 40px;
+    width: auto;
+    display: block ;
+}
+
+/* menu de navigation */
+.navbar-menu{
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+/* style des liens */
+.navbar-menu a{
+    font-family: var(--body);
+    font-size: 0.95rem;
+    font-weight:400 ;
+    color: rgba(255,255,255, 0.85) ;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+/* bouton de theme */
+.navbar-theme{
+    display: flex;
+    align-items: center;
+}
+#theme-toggle{
+    background: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+#theme-toggle:hover{
+    background-color: rgba(255,255,255, 0.1);
+}
+
+/* section hero */
+.hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    
+}
+.hero-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+.hero-text{
+    flex: 1;
+    text-align: left;
+}
+.hero p{
+    font-family: var(--body);
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    color: var(--text-muted-color);
+    margin-bottom: var(--space-lg);
+    font-weight: 500;
+}
+
+.hero-image{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.hero-image img{
+    width: 100%;
+    max-width: 500px;
+    height: 400;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+
+/* alignement du bouton */
+.bouton{
+    display: flex;
+    gap: 20px;
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.btn-primary , .btn-secondary{
+    font-family: var(--body);
+    padding: 12px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+}
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+ .btn-secondary{
+    border: 1px solid;
+    color: var(--secondary-color);
+    background:rgba(248,250,252, 0.05) ;
+
+ }
+.btn-secondary:hover{
+    background: rgba(248,250,252, 0.15);
+    border-color: var(--bg-light-color);
+    transform: translateY(-2px);
+}
+
+
+/* alignement des blocs compte à rebours */
+.count{
+    display: flex;
+    gap: 50px;
+    padding-top: 40px;
+    justify-content: center;
+   width: 100%;
+}
+.count div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.count span{
+    font-family: var(--heading);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    
+}
+.count p{
+    font-family: var(--body);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    margin: 4px 0 0 0 ;
+    letter-spacing: 0.05rem;
+    font-weight: 600;
+}
+
+
+
